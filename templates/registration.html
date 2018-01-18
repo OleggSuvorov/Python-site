@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{%if context.Error:%}
+     {%for error in context.Error %}
+    <h2>{{error}}</h2>
+     {%endfor%}
+{%endif%}
+<form action="/registration" method="POST">
+
+  {%if context.type.object.type_name == 'user':%}
+
+    First Name:<br>
+  {%else%}
+    Group Name:<br>
+  {%endif%}
+
+  <input type="text" name="first_name" value="">
+  <br>
+
+  {%if context.type.object.type_name == 'user':%}
+    Last Name:<br>
+    <input type="text" name="last_name" value="">
+    <br>
+  {%else%}
+    Descr:<br>
+    <input type="text" name="descr" value="">
+    <br>
+  {%endif%}
+
+  Nickname:<br>
+  <input type="text" name="nickname" value="">
+  <br>
+  Email:<br>
+  <input type="text" name="email" value="{%if context.user %}{{context.user.object.email}}{%endif%}">
+  <br>
+
+  {%if context.type.object.type_name == 'user':%}
+    Passw1:<br>
+    <input type="text" name="passw1" value="">
+    <br>
+    Passw2:<br>
+    <input type="text" name="passw2" value="">
+  {%endif%}
+  <input style="display: none" type="text" name="type_name" value="{{context.type.object.type_name}}">
+  <br><br>
+  <input type="submit" value="registr">
+</form>
+</body>
+</html>

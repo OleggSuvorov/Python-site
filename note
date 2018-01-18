@@ -1,0 +1,8 @@
+$.ajax({
+    url: '/ajax/example.html',
+    dataType : "json",
+    success: function(jsondata){
+    console.log(jsondata)
+	    $('.results').html('Name = ' + jsondata.name + ', Nickname = ' + jsondata.nickname);
+	  }
+});
