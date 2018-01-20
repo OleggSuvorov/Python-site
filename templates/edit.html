@@ -15,7 +15,7 @@ Nickname<input type="text" name="nickname" placeholder="{{context.user.object.ni
 <br>
 Email<input type="text" name="email" placeholder="{%if context.user %}{{context.user.object.email}}{%endif%}" value="{%if context.user %}{{context.user.object.email}}{%endif%}">
 <br>
-	Type<input type="text" name="type" placeholder="" value="{{context.user.object.type.type_name}}">
+	Type<input type="text" name="type_name" placeholder="" value="{{context.user.object.type.type_name}}">
 
 <br><br>
 Password <input type="text" name="password" placeholder="{{context.user.object.password}}" value="{{context.user.object.password}}">

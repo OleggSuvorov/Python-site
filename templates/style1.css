@@ -1,11 +1,7 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
-
-
-
 body {
-  color: #14171a;
   font-size: 16px;
   font:'Source Sans Pro', sans-serif;
+  background-color: #e6ecf0;
 }
 
 nav {
@@ -26,7 +22,7 @@ button {
   padding: 5px 10px;
   border-radius: 50px;
   background-color: #1da1f2;
-  color: white; 
+  color: white;
   font-weight: 5;
   border: 1px solid #1da1f2 !important; 
   box-shadow:none !important;
@@ -34,7 +30,7 @@ button {
 button:hover{
   background-color: white;
   transition: 0.5s;
-  font-color: black; 
+  color: black; 
 }
 
 input[type=text] {

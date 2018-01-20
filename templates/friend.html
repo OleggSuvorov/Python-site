@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title></title>
   
   
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="style1.css">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      
           <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -16,14 +18,11 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-      
-  
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+	<title></title>
 </head>
 <body>
-    <nav>
+<nav>
       <div class="container-fluid">
         <div class="row">
 
@@ -49,33 +48,17 @@
      </div>
     </nav>
 
+{{context.user.object.first_name}} 
+{{context.user.object.last_name}}
+
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-9 col-md-push-3">
-      
-    </div>
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6"></div>
+		<div class="col-md-3"></div>
+	</div>
+</div>		
 
-    <div class="col-md-3 col-md-pull-9">
-
-      <div class="profile" style="background-color: white; margin-top: 20px; margin-left: 20px;">
-      <img src="stressed_business_man.jpg" style="height: 100px; width: 100px; border-radius: 50%;">
-        <p>
-        <a href="/edit"><button style="color: black">Edit</button></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-  
- <script>
-$('#search').click(function(){
-    console.log("abc")
-    var firstName = document.getElementsByName("friends_search")[0].value;
-    window.location.href= firstName;
-})
-  
-
-</script> 
 
 </body>
 </html>

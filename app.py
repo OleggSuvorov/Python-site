@@ -63,7 +63,7 @@ def add_friend():
     user.add_friend(id=user_id)
     return redirect(request.referrer)
 
-@app.route('/<nickname>',methods=['GET'])
+@app.route('/user/<nickname>')
 @login_required
 def user_page(nickname):
     context = {}
@@ -75,7 +75,7 @@ def user_page(nickname):
     selectUser.select().And([('nickname','=',nickname)]).run()
     context['user'] = selectUser
 
-    return render_template('home.html', context=context)
+    return render_template('friend.html', context=context)
 
 # описуємо домашній роут
 # сіда зможуть попадати тільки GET запроси
@@ -143,5 +143,9 @@ def edit():
         user.getModelFromForm(request.form)
         user.save()
     return render_template('edit.html', context=context)
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
