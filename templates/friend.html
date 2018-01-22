@@ -40,7 +40,7 @@
       </div>
 
       <div class="col-md-3">
-        <a onenterkey="returnFunc()"><input type="text"  onenterkey="returnFunc()" placeholder="Search something..." name="friends_search" id="friends_search"></a>
+        <a onenterkey="returnFunc()"><input type="text"  onenterkey="returnFunc()" placeholder="Nickname ..." name="friends_search" id="friends_search"></a>
         <button style="" id="search">Search</button>
       </div>
 
@@ -48,13 +48,18 @@
      </div>
     </nav>
 
-{{context.user.object.first_name}} 
-{{context.user.object.last_name}}
+
+
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-3"></div>
-		<div class="col-md-6"></div>
+		<div class="col-md-6" style="text-align: center;"><h1>
+			First and last name: {{context.user.object.first_name}} 
+		{{context.user.object.last_name}}<p>
+		Nickaname: {{context.user.object.nickname}}<p>
+		Email: {{context.user.object.email}}<p>
+		</h1></div>
 		<div class="col-md-3"></div>
 	</div>
 </div>		

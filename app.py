@@ -143,9 +143,5 @@ def edit():
         user.getModelFromForm(request.form)
         user.save()
     return render_template('edit.html', context=context)
-
-
-
-
 if __name__ == '__main__':
     app.run(debug=True)
