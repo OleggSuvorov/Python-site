@@ -7,7 +7,7 @@
   
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-      <link rel="stylesheet" href="style1.css">
+      <link rel="stylesheet" href="{{url_for('static', filname='css/style1.css')}}">
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       
@@ -28,7 +28,7 @@
 
         <div class="col-md-3" style="">
 
-        <h><i class="fa fa-home" aria-hidden="true" style="margin-right: 5px;"></i>Home</h>
+            <h><a href="/"><i class="fa fa-home" aria-hidden="true" style="margin-right: 5px;"></i>Home</a></h>
         <h><i class="fa fa-bell" aria-hidden="true" style="margin-right: 5px; margin-left: 10px;"></i>Notifications</h>
         <h><i class="fa fa-comments" aria-hidden="true" style="margin-right: 5px; margin-left: 10px;"></i>
         Messages</h>
@@ -48,22 +48,38 @@
      </div>
     </nav>
 
-
+<div ckass=""></div>
 
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-3"></div>
 		<div class="col-md-6" style="text-align: center;"><h1>
-			First and last name: {{context.user.object.first_name}} 
+		First and last name: {{context.user.object.first_name}} 
 		{{context.user.object.last_name}}<p>
-		Nickaname: {{context.user.object.nickname}}<p>
+		Nickname: {{context.user.object.nickname}}<p>
 		Email: {{context.user.object.email}}<p>
 		</h1></div>
-		<div class="col-md-3"></div>
+        <div class="col-md-3">
+        	<form action="/add_friend" method="POST">
+        		<button type="submit">Add friend!</button>
+        	</form>
+        </div>
 	</div>
 </div>		
 
 
+
+
+
+ <script>
+$('#search').click(function(){
+    console.log("abc")
+    var first_name = document.getElementsByName("friends_search")[0].value;
+    window.location.href = '/user/' + first_name;
+})
+  
+
+</script> 
 </body>
 </html>

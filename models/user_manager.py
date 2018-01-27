@@ -27,8 +27,8 @@ class UserManager(SNBaseManager):
         self.object.descr = form.get('descr', '')
         return self
 
-    def add_friend(self, id=None, nickname=None):
-        if not (id or nickname):
+    def add_friend(self, id=None):
+        if not id:
             return
         relationManager = UserRelationManager()
         relationManager.addFriend(self.object.id, id)

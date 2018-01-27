@@ -1,0 +1,48 @@
+body {
+  font-size: 16px;
+  font:'Source Sans Pro', sans-serif;
+  background-color: #e6ecf0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  margin: 5px;
+  padding: 10px;
+  border-bottom-color: #1da1f2;
+  border-bottom: 1.5px solid #1c94e0;
+}
+input[type="text"] {
+  border-radius: 9px;
+  padding: 5px;
+  background: #eee;
+}
+button {
+  padding: 5px 10px;
+  border-radius: 50px;
+  background-color: #1da1f2;
+  color: white;
+  font-weight: 5;
+  border: 1px solid #1da1f2 !important; 
+  box-shadow:none !important;
+}
+button:hover{
+  background-color: white;
+  transition: 0.5s;
+  color: black; 
+}
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 1s ease-in-out;
+    transition: width 0.4s ease-in-out;
+     border:none !important;
+     box-shadow:none !important;
+     border-radius: 50px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:hover {
+    width: 50%;
+}

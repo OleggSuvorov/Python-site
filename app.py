@@ -55,7 +55,7 @@ def logout():
         del session['username']
     return redirect(url_for('login'))
 
-@app.route('/add_friend', methods=['GET'])
+@app.route('/add_friend', methods=['POST'])
 @login_required
 def add_friend():
     user_id = int(request.args.get('id',0))

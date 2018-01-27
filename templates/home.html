@@ -29,7 +29,7 @@
 
         <div class="col-md-3" style="">
 
-        <h><i class="fa fa-home" aria-hidden="true" style="margin-right: 5px;"></i>Home</h>
+        <h><i class="fa fa-home" aria-hidden="true" style="margin-right: 5px;"></i><a href="/"> Home</a></h>
         <h><i class="fa fa-bell" aria-hidden="true" style="margin-right: 5px; margin-left: 10px;"></i>Notifications</h>
         <h><i class="fa fa-comments" aria-hidden="true" style="margin-right: 5px; margin-left: 10px;"></i>
         Messages</h>
@@ -40,17 +40,9 @@
         <img src="993ed8f1-dfaa-4b44-b8fa-01c49c390635.png" style="height: 25px; margin-left: 250px;">
       </div>
 
-      <div class="col-md-3">
-        <a onenterkey="returnFunc()"><input type="text"  onenterkey="returnFunc()" placeholder="Search something..." name="friends_search" id="friends_search"></a>
+      <id= class="col-md-3">
+            <a onenterkey="returnFunc()"><input type="text"  onenterkey="returnFunc()" placeholder="Search something..." name="friends_search" id="friends_search"></a>
         <button style="" id="search">Search</button>
-        <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
       </div>
 
      </div>
@@ -78,8 +70,8 @@
  <script>
 $('#search').click(function(){
     console.log("abc")
-    var firstName = document.getElementsByName("friends_search")[0].value;
-    window.location.href= firstName;
+    var first_name = document.getElementsByName("friends_search")[0].value;
+    window.location.href = '/user/' + first_name;
 })
   
 
